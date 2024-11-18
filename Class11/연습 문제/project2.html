@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>이름 등장</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: greenyellow;
+        }
+    </style>
+
+</head>
+
+<body>
+    
+
+    <div class="window">
+        <canvas id="canvas1" width="500" height="300"></canvas>
+        <script>
+            
+
+            const canvas = document.getElementById('canvas1');
+            const context = canvas.getContext('2d');
+
+            // 'ㅇ' 그리기 (아크)
+            context.beginPath();
+            context.arc(100, 150, 40, 0, 2 * Math.PI); // 원의 중심 (100, 150), 반지름 40
+            context.stroke(); // 아크 그리기
+
+            // 'l' 그리기 (lineTo)
+            context.beginPath();
+            context.moveTo(170, 50); // 원의 오른쪽
+            context.lineTo(170, 250); // 수직으로 위로
+            context.stroke(); // 선 그리기
+
+            // '근' 그리기
+            context.beginPath();
+            // 왼쪽 수직선
+            context.moveTo(250, 200);
+            context.lineTo(250, 160);
+
+            // 상단 가로선
+            context.moveTo(240, 100);
+            context.lineTo(300, 100);
+
+            // 오른쪽 수직선
+            context.moveTo(300, 100);
+            context.lineTo(290, 140);
+
+            // 하단 가로선
+            context.moveTo(250, 200);
+            context.lineTo(310, 200);
+
+            // 세로선 추가
+            context.moveTo(350, 150);
+            context.lineTo(200, 150);
+
+            // 선 그리기
+            context.stroke();
+            context.moveTo(350, 200); // 아래 왼쪽
+            context.lineTo(350, 200); // 아래 오른쪽
+            context.lineTo(400, 100); // 위 중앙
+            context.moveTo(450, 200); // 아래 오른쪽
+            context.lineTo(400, 100);
+            context.moveTo(470,250);
+            context.lineTo(470,80);
+            context.moveTo(450, 150);
+            context.lineTo(470, 150);
+            context.moveTo(450, 220);
+            context.lineTo(370, 220);
+            context.moveTo(450, 220);
+            context.lineTo(450, 280);
+            
+            context.closePath(); // 도형 닫기
+            context.stroke(); // 선 그리기
+        </script>
+    </div>
+</body>
+</html>
