@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>문법 기초</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .section {
+            margin: 10px 0;
+            cursor: pointer;
+            padding: 10px;
+            border: 1px solid #ccc; /* 경계선 추가 */
+            border-radius: 5px; /* 모서리 둥글게 */
+            background-color: #f9f9f9; /* 배경색 추가 */
+        }
+        .sub-section {
+            margin-left: 20px;
+            display: none;
+            transition: all 0.3s ease; /* 애니메이션 효과 추가 */
+        }
+        .collapse.show {
+            display: block !important; /* Bootstrap collapse에서 강제로 보이도록 설정 */
+            margin-left: 20px; /* 오른쪽으로 이동 */
+        }
+        pre {
+            background-color: #e9ecef; /* 코드 블록 배경색 */
+            padding: 10px; /* 코드 블록 패딩 */
+            border-radius: 5px; /* 모서리 둥글게 */
+            border: 1px solid #ccc; /* 코드 블록 경계선 */
+            overflow-x: auto; /* 가로 스크롤 가능 */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h3>자바 스크립트</h3>
+        <div class="section" data-toggle="collapse" data-target="#variables">
+            1. 문법기초
+        </div>
+        <div id="variables" class="collapse">
+            <div class="section" data-toggle="collapse" data-target="#variableCreation">
+                1.1 변수
+            </div>
+            <div id="variableCreation" class="collapse">
+                <div class="section" data-toggle="collapse" data-target="#ageAndNameVariables">
+                    1.1.1 변수 만들기
+                </div>
+                <div id="ageAndNameVariables" class="collapse sub-section">
+                    <div>
+                        <p>1.1.1 나이가 담긴 변수</p>
+                        <pre>
+&lt;script&gt;
+    /*
+     예제01: 여러분의 나이가 담긴 변수 age를 만들어 주세요.
+    */
+    var age = 30;
+&lt;/script&gt;
+                        </pre>
+                    </div>
+                    <div>
+                        <p>1.1.2 이름과 나이가 담긴 변수</p>
+                        <pre>
+&lt;script&gt;
+/*
+예제02: 이름과 나이가 담긴 변수를 만들어 주세요.
+*/
+var name = "홍길동", age = 30;
+&lt;/script&gt;
+                        </pre>
+                    </div>
+                    <div>
+                        <p>1.1.3 이름_나이가_담긴변수_콤마활용</p>
+                        <pre>
+&lt;script&gt;
+/*
+예제03: 여러분의 이름과 나이를 저장한 변수를 콤마(,)를 이용해서 만들어 주세요.
+*/
+var name = "ddandongne", age = 30;
+&lt;/script&gt;
+                        </pre>
+                    </div>
+                    <div>
+                        <p>1.1.4 변수만들때의_주의사항</p>
+                        <pre>
+&lt;script&gt;
+/*
+03. 변수이름 만들 때 주의사항
+예제 : 변수 만들때 주의 사항 테스트.
+*/
+
+// 1. 숫자로 시작하면 안되요.
+var st = 10;
+
+// 2. 대소문자 구분 : name과 Name은 완전히 다른 변수랍니다.
+var name = "ddandongne";
+var Name = "ddandongne";
+
+// 3. 변수는 대문자가 아닌 소문자로 시작하세요.
+var Name = "ddandongne";
+//대신
+var name = "ddandongne";
+
+// 4. 변하지 않는 환경 변수의 값을 담는 상수 변수는 모두 대문자로 만들어 주세요.
+var DB_NAME = "webdongne";
+var ADMIN_ID = "ddandongne";
+
+// 5. 여러 단어가 조합되는 경우 다음과 같이 낙타 표기법(camelcase)으로 작성해 주세요.
+var userName = "ddandongne";
+var selectMenuIndex = 1;
+
+// 6. 문장과 세미콜론(문장뒤에 세미콜론 찍기)
+var age = 10;
+
+// 7. 자바스크립트에서 이미 정의된 예약어(키워드)를 사용하면 안돼요.
+var class = "test1";
+var for = "test2";
+var if = "test3";
+&lt;/script&gt;
+                        </pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
